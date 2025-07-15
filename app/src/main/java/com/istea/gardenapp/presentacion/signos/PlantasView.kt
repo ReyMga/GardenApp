@@ -96,7 +96,7 @@ fun ListaDeSignosView(searchText:String, plantas: List<Planta>, onSearch: (Strin
             )
         }
 
-        items(items = plantas) { planta ->
+        items(items = plantas ) { planta ->
             Card(
                 modifier = Modifier
                     .padding(horizontal = 20.dp, vertical = 10.dp)
@@ -113,7 +113,7 @@ fun ListaDeSignosView(searchText:String, plantas: List<Planta>, onSearch: (Strin
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Image(
-                        painterResource(R.drawable.i008),
+                        painterResource(planta.ilustrationId),
                         contentDescription = planta.nombre,
                         contentScale = ContentScale.Fit,
                         modifier = Modifier
